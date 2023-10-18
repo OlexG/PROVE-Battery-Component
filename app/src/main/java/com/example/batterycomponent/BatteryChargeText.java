@@ -18,10 +18,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.example.batterycomponent.R;
-
-import java.util.Objects;
-
 public class BatteryChargeText extends AppCompatTextView {
 
     public BatteryChargeText(Context context) {
@@ -44,7 +40,7 @@ public class BatteryChargeText extends AppCompatTextView {
 
     private void initialize() {
         // Set text size and color
-        setTextSize(30); // You can adjust the text size as needed
+        setTextSize(30);
         setTextColor(Color.BLACK);
         setTypeface(Typeface.DEFAULT_BOLD);
         setClickable(true);
@@ -86,7 +82,6 @@ public class BatteryChargeText extends AppCompatTextView {
         alertDialog.show();
 
 
-        // Set a click listener for the close button to dismiss the dialog
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,7 +93,6 @@ public class BatteryChargeText extends AppCompatTextView {
 
 
     public void setBatteryPercentage(int percentage) {
-        // Update the text based on the new percentage value
         setText(percentage + "%");
     }
 }

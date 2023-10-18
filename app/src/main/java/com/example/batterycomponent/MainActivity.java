@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
-            // Create a new instance of your fragment
             this.batteryComponent = BatteryComponent.newInstance(
                     100, 10, Color.WHITE);
 
@@ -47,6 +46,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    // Other lifecycle methods and event-handling code can go here
 }

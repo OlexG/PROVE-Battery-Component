@@ -17,13 +17,10 @@ import android.view.ViewTreeObserver;
  */
 public class BatteryComponent extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PERCENTAGE = "100";
     private static final String ARG_PRECISION = "10";
     private static final String ARG_BG_COLOR = Integer.toString(Color.GRAY);
 
-    // TODO: Rename and change types of parameters
     private int percentage;
     private int precision;
     private int bgColor;
@@ -39,7 +36,6 @@ public class BatteryComponent extends Fragment {
      * @param percentage Battery percentage
      * @return A new instance of fragment BatteryComponent.
      */
-    // TODO: Rename and change types and number of parameters
     public static BatteryComponent newInstance(int percentage, int precision, int bgColor) {
         BatteryComponent fragment = new BatteryComponent();
         Bundle args = new Bundle();
@@ -95,7 +91,6 @@ public class BatteryComponent extends Fragment {
         batteryView.setBatteryPercentage(this.percentage);
         batteryChargeText.setBatteryPercentage(this.percentage);
 
-        // Set a global layout listener to calculate left margin
         batteryLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -109,7 +104,6 @@ public class BatteryComponent extends Fragment {
             }
         });
 
-        // Return the layout
         return batteryLayout;
     }
 

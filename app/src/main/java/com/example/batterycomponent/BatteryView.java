@@ -14,7 +14,7 @@ class BatteryView extends View {
 
     public void setBatteryPercentage(int batteryPercentage) {
         this.batteryPercentage = batteryPercentage;
-        invalidate(); // This will trigger the onDraw method to re-draw the view
+        invalidate();
     }
 
     public BatteryView(Context context, int bgColor, int precision) {
